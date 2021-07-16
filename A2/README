@@ -1,0 +1,29 @@
+Instructions for Running and Testing the code. 
+1) Testing the simulation on the 32 combinations of parameters given : 
+    Open a terminal in this directory and type the command 
+    $ make
+    This creates a directory Output. 
+    The Output directory contains files of 3 types for each of the 32 parameter combinations, (i in 1, 2, 3, ..., 32)
+    1) plot_i (contains the sequence of cwnd update values for the simulation in kBs, one in each line)
+    2) plot_i_params (contains the corresponding set of parameters)
+    3) plot_i_mean_throughput (contains the mean throughput value for the simulation in units of (1/RTT) kB/s)
+    It also generates a Plots.pdf file containing the plots of congestion window size vs update number for each of the 32 parameter combinations. 
+
+2) Testing the simulation indivdually with custom parameter values
+    Open a terminal in the directory, and type in the command
+    $ ./cw ­-i <double> ­-m <double> -­n <double> ­-f <double> -­s <double> -­T <int> ­-o outfile
+    i represents parameter Ki
+    m represents parameter Km
+    n represents parameter Kn
+    f represents parameter Kf
+    s represents parameter Ps 
+    T represents the number of updates upto which the simulation will run
+
+    Doing this generates 3 output files, 
+    1) outfile (contains the sequence of cwnd update values for the simulation in kBs, one in each line)
+    2) outfile_params (contains the corresponding set of parameters)
+    3) outfile_mean_throughput (contains the mean throughput value for the simulation in units of (1/RTT) kB/s)
+
+Note : 
+1) Use "make clean" to remove the Output directory along with it's contents and also the generated executable. 
+2) The report does not contain the plots for each of the 32 parameter combinations. For reference, plots are present in the Plots.pdf file in this directory. 
