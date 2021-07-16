@@ -1,0 +1,16 @@
+CS3205 : Introduction to Computer Networks
+Assignment 3
+Author : Shreesha G Bhat (CS18B103)
+
+Instructions to run the code
+1) To run the simulation on a custom input file
+   Steps : 
+   1) Create the input file according to the given format in the problem statement, name it as "input" and save it in the current directory.
+   2) Invoke "make custom" command on the shell. 
+   3) Creates a directory called "Output" which contains the output file for each node i named as output-i.txt. 
+2) To run the example simulations on the two given input files example-input1 and example-input2. 
+   Steps :
+   1) Make sure both the input files are in the current directory. 
+   2) Invoke "make examples" command on the shell. 
+   3) Creates a directory called ExamplesOutput which contains the output file for each node for each input file as output1-i.txt and output2-i.txt respectively. 
+3) Use "make clean" to clear any existing Output/ExamplesOutput directory as well as the ospf executable. 
